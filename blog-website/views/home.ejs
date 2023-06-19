@@ -1,0 +1,16 @@
+
+
+<%-include("/home/anirban/Desktop/Angela hu backend/Blog-with-Database-Starting-Files/Blog-with-Database-Starting-Files/views/partials/header.ejs")-%>
+    <h1>Home</h1>
+<p>
+  <%=startingContent %>
+</p>>
+
+  <%posts.forEach(val=>{%>
+    <h2><%=val.title%></h2>
+    <p><%=val.data.substring(0,100)+"..."%><a href="/posts/<%=val.title%>">read more</a></p>
+  <%})%>
+
+
+
+<%-include("partials/footer")-%>
